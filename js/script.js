@@ -129,6 +129,16 @@ function resizeCanvas() {
 
 }
 
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+    var navList = document.querySelector('.nav-list');
+    if (navList.style.display === 'none' || navList.style.display === '') {
+        navList.style.display = 'flex';
+    } else {
+        navList.style.display = 'none';
+    }
+});
+
+
 window.addEventListener('resize', resizeCanvas);
 
 init();

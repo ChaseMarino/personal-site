@@ -20,7 +20,7 @@ html {
     top: 0;
     padding-top: 1%;
     background-color: rgba(244, 244, 244, 0.625);
-    margin-bottom: 100px;
+    margin-bottom: 3%;
     border-radius: 50px; /* or whatever radius you desire */
 
 }
@@ -75,7 +75,8 @@ footer {
     left: 0;          /* Pin to the left of the viewport */
     width: 100%;  
     background-color: #141414;
-    padding: 20px 0;
+    padding-top: 0;
+    padding-bottom: 30px;
     color: #999;
 }
 
@@ -91,6 +92,7 @@ footer {
 .contact-info,
 .social-links,
 .copyright {
+    text-align: center;
     flex-basis: calc(33.33% - 20px);
     box-sizing: border-box;
 }
@@ -112,6 +114,9 @@ h4 {
     transition: color 0.3s;
 }
 
+.contact-info a {
+    color: #999;
+}
 .social-links a:hover {
     color: #6D1995;
 }
@@ -144,9 +149,9 @@ h4 {
 }
 
 .content-resume {
+    margin-top: 50%;
     width: 100%;
     display: flex;
-    align-items: flex-start; /* Start all children at the top edge of the flex container */
     flex-direction: row; /* Keep children side by side */
     justify-content: center; /* Center the blocks horizontally */
 }
@@ -185,7 +190,6 @@ li {
 
 /* Style for the text container */
 .content-text {
-    
     width: min-content;
     background-color: rgba(255, 255, 255, 0.818);
     box-shadow:
@@ -214,4 +218,60 @@ li {
     margin-top: 5px;
     font-size: 0.9em;
     color: #666;
+}
+
+/* Default styles for large screens */
+.dropdown-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+
+    .nav {
+        background-color: rgb(85, 85, 85);
+        margin-bottom: 0;
+        width: 80%;
+    }
+
+    .content-resume {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Keep children side by side */
+        justify-content: center; /* Center the blocks horizontally */
+    }
+
+    .nav-list {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        background-color: rgb(85, 85, 85);
+        border-radius: 0 0 50px 50px; /* Rounded bottom corners */
+    }
+
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center; 
+    }
+
+    .dropdown-btn {
+        display: block;
+        background-color: rgb(85, 85, 85);
+        border: none;
+        width: 100%;
+        padding: 10px 15px;
+        font-size: larger;
+        /*border-radius: 50px 50px 0 0; /* Rounded top corners */
+    }
+
+    .dropdown-btn:focus {
+        outline: none;
+    }
 }
