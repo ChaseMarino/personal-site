@@ -189,6 +189,7 @@ li {
 }
 /* Style for the main content container */
 .content-main {
+    margin-top: 5%;
     height: 60%;
     width: 100%;
     display: flex;          /* Use flex to layout child elements */
