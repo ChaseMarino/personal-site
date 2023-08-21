@@ -15,8 +15,13 @@ html {
     padding: 0;
 }
 
+.download-button {
+    display: none;
+}
+
 .nav {
     top: 0;
+    margin-top: 2%;
     background-color: rgba(244, 244, 244, 0.625);
     margin-bottom: 3%;
     border-radius: 50px; 
@@ -65,12 +70,13 @@ html {
     position: absolute;
     height: 2px;
     background-color: #0077cc;
-    width: 0;
-    bottom: 0;
-    left: 0;
+
     transition: width 0.3s, left 0.3s;
 }
 
+.contact {
+    display: none;
+}
 
 .starry-div {
     position: fixed; /* Fix it to cover the entire viewport */
@@ -151,13 +157,7 @@ h4 {
     background-color: #f9f9f9; /* Light background for better visibility */
 }
 
-/* Style for the main content container */
-.content-main {
-    min-height: 100%; 
-    display: flex;          /* Use flex to layout child elements */
-    justify-content: center; /* Center children horizontally */
-    align-items: center;    /* Center children vertically */
-}
+
 
 .content-resume {
     width: 100%;
@@ -184,6 +184,17 @@ li {
     margin-bottom: 15px;
 }
 
+.code-text {
+    width: min-content;
+}
+/* Style for the main content container */
+.content-main {
+    height: 60%;
+    width: 100%;
+    display: flex;          /* Use flex to layout child elements */
+    justify-content: center; /* Center children horizontally */
+    align-items: center;    /* Center children vertically */
+}
 
 /* Style for the image container */
 .content-img {
@@ -195,23 +206,25 @@ li {
 
 .content-img img {
     margin-right: 2%;
-    max-width: 80%;      /* Ensure the image doesn't overflow its container */
+    width: 25%;      /* Ensure the image doesn't overflow its container */
 }
 
 /* Style for the text container */
 .content-text {
-    width: min-content;
     background-color: rgba(255, 255, 255, 0.818);
     box-shadow:
         0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
         0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
         0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
     border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
-    flex: 1;               /* Take up the other half of the space */
-    display: flex;         /* Use flex to center the text both vertically and horizontally */
+               /* Take up the other half of the space */
+    /*display: flex;          Use flex to center the text both vertically and horizontally */
+    flex: 1;
     justify-content: left;
     align-items: left;
     margin-left: 2%;
+    /*height: 75%;*/
+    width: 1px;
     font-size: 1.5rem;     /* Adjust font-size as needed */
 }
 
@@ -236,7 +249,20 @@ li {
 }
 
 @media (max-width: 768px) {
+    .contact {
+        display: block;
+    }
+
+    .download-button {
+        margin: auto;
+        display: block;
+    }
+
     footer {
+        display: none;
+    }
+
+    .underline {
         display: none;
     }
 
@@ -248,6 +274,8 @@ li {
         background-color: rgb(85, 85, 85);
         margin-bottom: 0;
         width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content-resume {
@@ -266,6 +294,10 @@ li {
         margin: 0;
         background-color: rgb(85, 85, 85);
         border-radius: 0 0 50px 50px; /* Rounded bottom corners */
+    }
+
+    .resume-section {
+        margin-bottom: 1%;
     }
 
 

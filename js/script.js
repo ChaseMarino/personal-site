@@ -104,11 +104,11 @@ links.forEach(link => {
 
         adjustUnderline(link);
 
-        // After adjusting the underline, navigate to the link's href.
-        // This simulates the default behavior of the link.
-        if(link.href) {
-            window.location.href = link.href;
-        }
+        setTimeout(() => {
+            if(link.href) {
+                window.location.href = link.href;
+            }
+        }, 350);  // This delay allows the underline transition to complete before the page navigation occurs.
     });
 });
 
@@ -118,6 +118,11 @@ function adjustUnderline(element) {
 
     underline.style.width = `${width}px`;
     underline.style.left = `${left}px`;
+}
+
+function adjustActiveUnderline() {
+    const activeLink = document.querySelector('.nav-link[data-active="true"]');
+    adjustUnderline(activeLink);
 }
 
 function resizeCanvas() {
@@ -138,8 +143,10 @@ document.querySelector('.dropdown-btn').addEventListener('click', function() {
     }
 });
 
+window.addEventListener('resize', adjustActiveUnderline);
 
 window.addEventListener('resize', resizeCanvas);
+adjustActiveUnderline();
 
 init();
 animate();
