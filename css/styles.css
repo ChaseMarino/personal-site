@@ -2,7 +2,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    /*display: flex;*/
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -28,17 +27,6 @@ html {
 
 }
 
-/***
-.nav {
-    position: fixed;
-    top: 0;
-    padding-top: 1%;
-    background-color: rgba(244, 244, 244, 0.625);
-    margin-bottom: 3%;
-    border-radius: 50px; /* or whatever radius you desire 
-
-}
-*/
 .nav-list {
     display: flex;
     list-style-type: none;
@@ -218,15 +206,14 @@ li {
         0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
         0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
     border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
-               /* Take up the other half of the space */
-    /*display: flex;          Use flex to center the text both vertically and horizontally */
+    /*display: flex;          /*Use flex to center the text both vertically and horizontally */
     flex: 1;
     justify-content: left;
     align-items: left;
     margin-left: 2%;
     /*height: 75%;*/
     width: 1px;
-    font-size: 1.5rem;     /* Adjust font-size as needed */
+    font-size: 1.5rem;     
 }
 
 .pdf-iframe {
@@ -314,7 +301,6 @@ li {
         width: 100%;
         padding: 10px 15px;
         font-size: larger;
-        /*border-radius: 50px 50px 0 0; /* Rounded top corners */
     }
 
     .dropdown-btn:focus {
