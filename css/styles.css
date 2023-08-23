@@ -229,6 +229,19 @@ li {
 }
 
 @media (max-width: 768px) {
+
+    .content-index {
+        grid-template-rows: 1fr 50% 50% 1fr; /* 4 columns */
+
+    }
+    .content-img  {
+        grid-row: 2; /*todo*/
+    }
+
+    .content-text  {
+        grid-row: 3;
+    }
+
     .contact {
         display: block;
     }
