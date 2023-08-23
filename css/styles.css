@@ -173,52 +173,44 @@ li {
 }
 
 .code-text {
-    width: min-content;
+    
 }
+
 /* Style for the main content container */
-.content-main {
-    margin-top: 5%;
-    height: 60%;
-    width: 100%;
-    display: flex;          /* Use flex to layout child elements */
-    justify-content: center; /* Center children horizontally */
-    align-items: center;    /* Center children vertically */
+.content-index {
+    display: grid;                  /* Makes it a grid container */
+    grid-template-columns: 1fr 25% 25% 1fr; /* 4 columns */
+    height: 80vh;                  /* Makes it span the entire viewport height */
+    align-items: start;            /* Centers items vertically in their cells */
 }
 
-/* Style for the image container */
-.content-img {
-    flex: 1;               /* Take up half the space in the flex container */
-    display: flex;         /* Use flex for centering the image vertically */
-    justify-content: right;
-    align-items: right;
+.content-img  {
+    grid-column: 2; /* Place it in the second column */
+    
+    max-width: 100%;                /* Make the image responsive */
+    height: auto;                   /* Retain aspect ratio */
+    display: block;                 /* Remove default margin from images */
+    margin: 20% auto;                 /* Centers the image horizontally */
 }
 
-.content-img img {
-    margin-right: 2%;
-    width: 25%;      /* Ensure the image doesn't overflow its container */
-}
-
-/* Style for the text container */
 .content-text {
+    margin: 20% auto;                 /* Centers the image horizontally */
+    grid-column: 3; /* Place it in the second column */
     background-color: rgba(255, 255, 255, 0.818);
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
-        0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
-        0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
-    border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
-    /*display: flex;          /*Use flex to center the text both vertically and horizontally */
-    flex: 1;
-    justify-content: left;
-    align-items: left;
-    margin-left: 2%;
-    /*height: 75%;*/
-    width: 1px;
     font-size: 1.5rem;     
+    
+    width: min-content;
+    height: max-content;
+    box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
+    0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
+    0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
+    border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
 }
 
 .pdf-iframe {
     display: block;           /* Treats the iframe like a block element. */
-    width: 75%;               /* Sets the width to 75% of the parent container. */
+    width: 50%;               /* Sets the width to 75% of the parent container. */
     height: 750px;             /* Adjusts height based on the content. */
     margin: 0 auto;           /* Centers the iframe horizontally. */
     border: none;             /* Removes any default border. */

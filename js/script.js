@@ -42,7 +42,7 @@ class Star {
 let stars = [];
 
 function init() {
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 300; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const radius = Math.random() * 2 + 1;
@@ -59,7 +59,7 @@ function init() {
 
 function connectStars(star1, star2) {
     ctx.strokeStyle = star1.color;
-    ctx.lineWidth = 0.2;
+    ctx.lineWidth = 0.3;
     ctx.beginPath();
     ctx.moveTo(star1.x, star1.y);
     ctx.lineTo(star2.x, star2.y);
