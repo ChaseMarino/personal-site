@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-
 }
 
 html {
@@ -154,6 +153,14 @@ h4 {
     justify-content: center; /* Center the blocks horizontally */
 }
 
+.content-contact {
+    width: 100%;
+    padding-top: 15%;
+    display: flex;
+    justify-content: center; /* Center the blocks horizontally */
+    align-items: center;
+}
+
 
 h3 {
     text-align: center;
@@ -198,18 +205,36 @@ li {
     margin-top: 20%;                 /* Centers the image horizontally */
     margin-left: 10%;
     grid-column: 3; /* Place it in the second column */
-    background-color: rgba(255, 255, 255, 0.818);
     font-size: 1.5rem;     
     
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
     height: max-content;
+    background-color: rgba(255, 255, 255, 0.818);
     box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
     0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
     0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
     border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
+}
+
+.shadow-layer {
+    background-color: rgba(255, 255, 255, 0.818);
+    box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
+    0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
+    0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
+    border-radius: 5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.expando {
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 .pdf-iframe {
@@ -304,6 +329,9 @@ li {
         margin-bottom: 1%;
     }
 
+    .pdf-iframe {
+        width: 100%;
+    }
 
     .nav-item {
         margin: 10px 0;
