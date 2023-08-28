@@ -233,7 +233,7 @@ li {
     display: block;
     width: 50%;
     height: 600px;
-    margin: 0 auto 100px;
+    margin: 10px auto 100px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
