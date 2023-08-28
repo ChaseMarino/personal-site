@@ -13,7 +13,9 @@ html {
     padding: 0;
 }
 
-.download-button {
+.download-button, 
+.contact,
+.dropdown-btn {
     display: none;
 }
 
@@ -23,7 +25,6 @@ html {
     background-color: rgba(244, 244, 244, 0.625);
     margin-bottom: 3%;
     border-radius: 50px; 
-
 }
 
 .nav-list {
@@ -31,7 +32,6 @@ html {
     list-style-type: none;
     justify-content: center;
     align-items: center;
-    
 }
 
 .nav-item {
@@ -61,23 +61,20 @@ html {
     transition: width 0.3s, left 0.3s;
 }
 
-.contact {
-    display: none;
-}
-
 .starry-div {
-    position: fixed; /* Fix it to cover the entire viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Push it behind other content */
+    z-index: -1;
 }
+
 footer {
-    position: fixed;  /* Fixed positioning */
-    bottom: 0;        /* Pin to the bottom of the viewport */
-    left: 0;          /* Pin to the left of the viewport */
-    width: 100%;  
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #141414;
     padding-top: 0;
     padding-bottom: 30px;
@@ -121,10 +118,8 @@ h4 {
 .contact-info a {
     color: #999;
 }
-.social-links a:hover {
-    color: #6D1995;
-}
 
+.social-links a:hover,
 .contact-info a:hover {
     color: #6D1995;
 }
@@ -138,26 +133,24 @@ h4 {
     flex: 1;
     margin-right: 2%;
     margin-left: 2%;
-    padding: 0 15px; /* Give some space between the sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-    border-radius: 10px; /* Optional: Round the corners */
-    background-color: #f9f9f9; /* Light background for better visibility */
+    padding: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
-
-
 
 .content-resume {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Keep children side by side */
-    justify-content: center; /* Center the blocks horizontally */
+    flex-direction: row;
+    justify-content: center;
 }
 
 .content-contact {
     width: 100%;
     padding-top: 15%;
     display: flex;
-    justify-content: center; /* Center the blocks horizontally */
+    justify-content: center;
     align-items: center;
 }
 
@@ -179,12 +172,11 @@ li {
     margin-bottom: 15px;
 }
 
-/* Style for the main content container */
 .content-index {
-    display: grid;                  /* Makes it a grid container */
-    grid-template-columns: 1fr 40% 40% 1fr; /* 4 columns */
-    height: 80vh;                  /* Makes it span the entire viewport height */
-    align-items: start;            /* Centers items vertically in their cells */
+    display: grid;
+    grid-template-columns: 1fr 40% 40% 1fr;
+    height: 80vh;
+    align-items: start;
 }
 
 .pic {
@@ -192,39 +184,37 @@ li {
     height: auto;
 }
 .content-img  {
-    grid-column: 2; /* Place it in the second column */
-    max-width: 100%;                /* Make the image responsive */
-    height: auto;                   /* Retain aspect ratio */
-    display: block;                 /* Remove default margin from images */
-    margin-top: 20%;                 /* Centers the image horizontally */
+    grid-column: 2;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20%;
     margin-right: 10%;
 }
 
 .content-text {
-
-    margin-top: 20%;                 /* Centers the image horizontally */
+    margin-top: 20%;
     margin-left: 10%;
-    grid-column: 3; /* Place it in the second column */
+    grid-column: 3;
     font-size: 1.5rem;     
-    
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
     height: max-content;
     background-color: rgba(255, 255, 255, 0.818);
     box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
-    0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
-    0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
-    border-radius: 5px;  /* To give a rounded corner effect, which usually complements shadows */
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 .shadow-layer {
     background-color: rgba(255, 255, 255, 0.818);
     box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.1),     /* Close shadow with slight offset */
-    0 4px 8px rgba(0, 0, 0, 0.2),     /* Medium shadow for depth */
-    0 10px 20px rgba(0, 0, 0, 0.5);   /* Distant shadow for depth effect */
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -238,12 +228,12 @@ li {
 }
 
 .pdf-iframe {
-    display: block;           /* Treats the iframe like a block element. */
-    width: 50%;               /* Sets the width to 75% of the parent container. */
-    height: 750px;             /* Adjusts height based on the content. */
-    margin: 0 auto;           /* Centers the iframe horizontally. */
-    border: none;             /* Removes any default border. */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow for some depth. */
+    display: block;
+    width: 50%;
+    height: 750px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .description {
@@ -252,19 +242,13 @@ li {
     color: #666;
 }
 
-/* Default styles for large screens */
-.dropdown-btn {
-    display: none;
-}
-
 @media (max-width: 768px) {
-
     .content-index {
         display: grid;
-        grid-template-rows:.6fr .6fr; /* 4 columns */
-        grid-template-columns: none; /* 4 columns */
-
+        grid-template-rows:.6fr .6fr;
+        grid-template-columns: none;
     }
+
     .content-img  {
         margin: 5% auto;
         grid-row: 2;
@@ -287,10 +271,7 @@ li {
         display: block;
     }
 
-    footer {
-        display: none;
-    }
-
+    footer, 
     .underline {
         display: none;
     }
@@ -311,18 +292,18 @@ li {
         margin-top: 10%;
         width: 100%;
         display: flex;
-        flex-direction: column; /* Keep children side by side */
-        justify-content: center; /* Center the blocks horizontally */
+        flex-direction: column;
+        justify-content: center;
     }
 
     .nav-list {
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
         left: 0;
         right: 0;
         margin: 0;
         background-color: rgb(85, 85, 85);
-        border-radius: 0 0 50px 50px; /* Rounded bottom corners */
+        border-radius: 0 0 50px 50px;
     }
 
     .resume-section {
