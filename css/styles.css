@@ -182,6 +182,8 @@ li {
 .pic {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+
 }
 .content-img  {
     grid-column: 2;
@@ -230,8 +232,8 @@ li {
 .pdf-iframe {
     display: block;
     width: 50%;
-    height: 750px;
-    margin: 0 auto;
+    height: 600px;
+    margin: 0 auto 100px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
